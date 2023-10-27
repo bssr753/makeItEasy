@@ -3,7 +3,7 @@ package src.main.java.MyApp.customerAccount;
 import java.util.Random;
 import java.util.UUID;
 
-public class customerAccountInfo {
+public class CustomerAccountInfo {
 
 
     public String generateUUIDNumber()
