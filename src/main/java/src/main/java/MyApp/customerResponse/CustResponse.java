@@ -1,16 +1,15 @@
 package src.main.java.MyApp.customerResponse;
 
-import java.util.Objects;
 import java.util.Scanner;
 
-public class Response {
+public class CustResponse {
 
 
-    public static Scanner scanner = new Scanner(System.in);
+    public Scanner scanner = new Scanner(System.in);
 
-    public  static String nameInput() {
+    public String nameInput() {
 
-        System.out.println("Enter your name ;   ");
+        System.out.println("Enter your name :   ");
         String name = scanner.nextLine();
         System.out.println(name);
 
@@ -26,15 +25,15 @@ public class Response {
 //        ssnInput();
 //    }
 
-    public static int ssnInput() {
+    public  int ssnInput() {
         System.out.println("Please Enter your last four digits of SSN :    ");
         int SSN = scanner.nextInt();
         return SSN;
     }
 
 
-    public static double birthInput() {
-        System.out.println("Enter your Date of Birth as mm.dd.yyyy :      ");
+    public  double birthInput() {
+        System.out.println("Enter your Date of Birth as mm.dd :      ");
         double DOB = scanner.nextDouble();
         return DOB;
     }

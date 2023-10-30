@@ -1,31 +1,34 @@
 package src.main.java.MyApp;
 
 import src.main.java.MyApp.customerAccount.CustomerAccountInfo;
-import src.main.java.MyApp.customerResponse.Response;
+import src.main.java.MyApp.customerResponse.CustResponse;
+import src.main.java.MyApp.userLogin.Login;
 
 import java.util.Objects;
 
 public class Bank {
 
     private  final String customerName = "Madhura";
-    public double DOB = 06.18;
+    public final double DOB = 06.18;
 
-    public  int SSN = 5346;
+    public  final int SSN = 1234;
 
-    //public  Response response = new Response();
+    public  CustResponse custResponse = new CustResponse();
 
     public  CustomerAccountInfo customerAccount =new CustomerAccountInfo();
+    private Login login = new Login();
+
 
     public  void greetingMessage()
     {
-        System.out.println("Welcome to our SAI bank");
-        validateCustomer();
+        System.out.println("Please mention your User Type to log in:  ");
+        login.loginDo();
 
     }
     public  void validateCustomer (){
 
-        if (Response.nameInput().equals(this.customerName) && Response.ssnInput() == this.SSN && Objects.equals(Response.birthInput(), this.DOB)) {
-            System.out.println("Please find your Account number  ;   " + customerAccount.customerAccountNumber());
+        if (custResponse.nameInput().equalsIgnoreCase(this.customerName) && custResponse.ssnInput() == this.SSN && custResponse.birthInput() == (this.DOB)) {
+            System.out.println("Please find your Account number  :   " + customerAccount.customerAccountNumber());
         }
         else
             System.out.println("Input Wrong");
